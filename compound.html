@@ -1,49 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">Financial Calculators</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link " href="mortagage.html">Mortgage</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="annuity.html">Annuity</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="compound.html">Compound Interest</a>
-                  </li>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Financial Calculators</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="mortgage.html">Mortgage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="annuity.html">Annuity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="compound.html">Compound Interest</a>
+            </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="temp.html">Temperature</a>
-                  </li>
-                
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    
+            <li class="nav-item">
+              <a class="nav-link" href="temp.html">Temperature</a>
+            </li>
 
-   
-   
-    <script src="scripts/compund.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-sm-4">
+        <label for="inputDeposit" class="col-form-label">Deposit :</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputDeposit" class="form-control" aria-describedby="inputDeposithelp">
+      </div>
+      <div class="col-auto">
+        <span id="inputDeposithelp" class="form-text">
+          the amount you will deposit
+        </span>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-sm-4">
+        <label for="inputInterest" class="col-form-label">Interest Rate: </label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputInterest" class="form-control" aria-describedby="inputInteresthelp">
+      </div>
+      <div class="col-auto">
+        <span id="inputInteresthelp" class="form-text">
+          The interest rate (As a whole number, i.e. 6.75)
+        </span>
+      </div>
+    </div>
+
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-sm-4">
+        <label for="inputAmtOfYears" class="col-form-label"># of Years: </label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="inputAmtOfYears" class="form-control" aria-describedby="inputAmtOfYearshelp">
+      </div>
+      <div class="col-auto">
+        <span id="inputAmtOFYearshelp" class="form-text">
+          Number of years.
+        </span>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-auto">
+        <input type="button" class="btn btn-primary" id="buttonCalculate" value="Calculate!">
+      </div>
+    </div>
+
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-sm-4">
+        <label for="outputFutureValue" class="col-form-label">Future Value </label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="outputFutureValue" class="form-control" aria-describedby="outputFutureValuehelp">
+      </div>
+      <div class="col-auto">
+        <span id="outputFutureValuehelp" class="form-text">
+        Future value of deposit
+        </span>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3 align-items-center">
+      <div class="col-sm-4">
+        <label for="outputTotalInterestEarned" class="col-form-label">Total Interest Earned:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" id="outputTotalInterestEarned" class="form-control" aria-describedby="outputTotalInterestEarned">
+      </div>
+      <div class="col-auto">
+        <span id="outputTotalInterestEarnedhelp" class="form-text">
+       The total amount paid to complete the loan.
+        </span>
+      </div>
+    </div>
+  </main>
+
+
+
+  <script src="scripts/compund.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>
