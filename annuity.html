@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <title></title>
+   <title>Annuity</title>
 </head>
 <body>
 
@@ -38,7 +38,70 @@
           </nav>
     </header>
     
+<main>
 
+  <div class="row g-3 mb-3 align-items-center">
+    <div class="col-sm-4">
+      <label for="inputMonthlyPayout" class="col-form-label">Monthly Payment:</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="inputMonthlyPayout" class="form-control" aria-describedby="inputMonthlyPayouthelp">
+    </div>
+    <div class="col-auto">
+      <span id="inputMonthlyPayouthelp" class="form-text">
+        the amount you will deposit
+      </span>
+    </div>
+  </div>
+
+  <div class="row g-3 mb-3 align-items-center">
+    <div class="col-sm-4">
+      <label for="inputInterest" class="col-form-label">Interest Rate: </label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="inputInterest" class="form-control" aria-describedby="inputInteresthelp">
+    </div>
+    <div class="col-auto">
+      <span id="inputInteresthelp" class="form-text">
+        The interest rate (As a whole number, i.e. 6.75)
+      </span>
+    </div>
+  </div>
+
+
+  <div class="row g-3 mb-3 align-items-center">
+    <div class="col-sm-4">
+      <label for="inputAmountOfYears" class="col-form-label"> # of Years:</label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="inputAmountOfYears" class="form-control" aria-describedby="inputAmountOfYearshelp">
+    </div>
+    <div class="col-auto">
+      <span id="inputAmountOFYearshelp" class="form-text">
+        Number of years.
+      </span>
+    </div>
+  </div>
+
+  <div class="row g-3 mb-3 align-items-center">
+    <div class="col-auto">
+      <input type="button" class="btn btn-primary" id="buttonCalculate" value="Calculate!">
+    </div>
+  </div>
+
+  <div class="row g-3 mb-3 align-items-center">
+    <div class="col-sm-4">
+      <label for="outputPresentValue" class="col-form-label">Present Value : </label>
+    </div>
+    <div class="col-auto">
+      <input type="text" id="outputPresentValue" class="form-control" aria-describedby="outputPresentValue">
+    </div>
+    <div class="col-auto">
+      <span id="outputPresentValuehelp" class="form-text">
+      Ordinary Annuity
+    </div>
+  </div>
+</main>
 
     <script src="scripts/annuity.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
