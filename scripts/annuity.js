@@ -8,7 +8,7 @@ window.onload =init;
 function init(){
     const buttonCalculate= document.getElementById("buttonCalculate")
     buttonCalculate.onclick = buttonCalculateClick;
-
+// onclick attribute say "when sombody clicks this button call the function named buttonCalculateClick"
 }
 
 function buttonCalculateClick (){

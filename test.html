@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Financial Calculators</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="mortgage.html">Mortgage Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="annuity.html">Annuity Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="compound.html">CD Calculator</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="temp.html">Temperature Calculator</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <h1 class="display-3 p-3 mb-3"> Mortgage Calculator</h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+
+                <div class="row g-3 mb-3 align-items-center">
+                    <div class="col-3">
+                        <label for="inputPrincipal" class="col-form-label">Principal :</label>
+                    </div>
+                    <div class=" col-3">
+                        <input type="number" id="inputPrincipal" class="form-control"
+                            aria-describedby="inputPrincipalhelp">
+                    </div>
+                    <div class=" col-6">
+                        <span id="inputPrincipalhelp" class="form-text">
+                            the amount you will borrow
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-3 align-items-center">
+                    <div class=" col-3">
+                        <label for="inputInterest" class="col-form-label">Interest Rate:</label>
+                    </div>
+                    <div class=" col-3">
+                        <input type="number" id="inputInterest" class="form-control"
+                            aria-describedby="inputInteresthelp">
+                    </div>
+                    <div class="col-6">
+
+                        <span id="inputInteresthelp" class="form-text">
+                            The interest rate (As a whole number, i.e. 6.75)
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="row g-3 mb-2 align-items-center">
+                    <div class="col-3">
+                        <label for="inputLoanLength" class="col-form-label">Loan Length :</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" id="inputLoanLength" class="form-control"
+                            aria-describedby="inputLoanLengthhelp">
+                    </div>
+                    <div class="col-6">
+                        <span id="inputLoanLengthhelp" class="form-text">
+                            the length of loan in years.
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="row g-3 mb-3 align-items-center">
+                    <div class="col-auto">
+                        <input type="button" class="btn btn-primary" id="buttonCalculate" value="Calculate!">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+
+                <div class="row g-3 mb-3 align-items-center">
+                    <div class="col-3">
+                        <label for="outputMonthlyPayment" class="col-form-label">Monthly Payment:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" id="outputMonthlyPayment" class="form-control"
+                            aria-describedby="outputMonthlyPaymenthelp">
+                    </div>
+                    <div class="col-6">
+                        <span id="outputMonthlyPaymenthelp" class="form-text">
+                            The monthly amount due.
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="row g-3 mb-3 align-items-center">
+                    <div class="col-3">
+                        <label for="outputTotalAmount" class="col-form-label">Total Interest Paid:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" id="outputTotalAmount" class="form-control"
+                            aria-describedby="outputTotalAmounthelp">
+                    </div>
+                    <div class="col-6">
+                        <span id="outputTotalAmounthelp" class="form-text">
+                            The total amount paid to complete the loan.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="scripts/mortgage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
